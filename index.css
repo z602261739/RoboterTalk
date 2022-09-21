@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    box-sizing: border-box;
+    width: 700px;
+    height: 100%;
+    border: 2px solid black;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    resize: both;
+    overflow: hidden;
+}
+.wrapper .title,
+.wrapper .send{
+    box-sizing: border-box;
+    flex: 0 0 50px;
+    background-color: #999;
+}
+.wrapper .content{
+    flex: 1 1 auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+.wrapper .title{
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+.wrapper .send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper .send input{
+    border: none;
+    outline: none;
+    width: 580px;
+    height: 30px;
+    font-size: 20px;
+}
+.wrapper .send button{
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: palegoldenrod;
+}
+.wrapper .content .clearfix::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.wrapper .content .mine{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+.wrapper .content .mine img{
+    width:30px;
+    height: 30px;
+    border-radius: 7px;
+    float: right;
+}
+.wrapper .content .mine .say {
+    max-width: 55%;
+    border-radius: 7px;
+    float: right;
+    border: 2px solid black;
+    line-height: 30px;
+    transform: translateX(-10px);
+    padding: 5px 10px;
+}
+.wrapper .content .mine .say::after{
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-left-color: black;
+    top: 3px;
+    right: 0;
+    position: absolute;
+    transform: translateX(100%);
+}
+
+
+.wrapper .content .roboter {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+.wrapper .content .roboter img {
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    float: left;
+}
+.wrapper .content .roboter .say {
+    max-width: 55%;
+    border-radius: 7px;
+    float: left;
+    border: 2px solid black;
+    line-height: 30px;
+    transform: translateX(10px);
+    padding: 5px 10px;
+}
+.wrapper .content .roboter .say::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-color: black;
+    top: 3px;
+    left: 0;
+    position: absolute;
+    transform: translateX(-100%);
+}
+
+
+.send .send-button:hover{
+    cursor: pointer;
+}
